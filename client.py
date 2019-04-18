@@ -42,9 +42,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
 	if 'ass' in message.content:
+		channel = message.channel
 		await message.delete()
-#		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-#		await client.send_message(message.channel, "No Cussing in this chat.")
+		await client.send(message.author.mention + "*, no need to say that!*")
+		await channel.send("No Cussing! Thanks!")
 #	if 'cunt' in message.content:
 #		await client.delete_message(message)
 #		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
