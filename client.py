@@ -91,7 +91,7 @@ async def role(ctx, userid, *, content:str):
 	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
 		try:
 			channel = ctx.message.channel
-			roleadd = discord.utils.get(member.server.roles, name=role)
+			roleadd = discord.utils.get(ctx.message.server.roles, name=role)
 			member = await client.get_user_info(userid)
 			await client.add_roles(member, roleadd)
 		except:
