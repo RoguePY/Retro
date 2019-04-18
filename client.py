@@ -46,7 +46,7 @@ async def on_ready():
 async def on_message(message):
 	channel = message.channel
 	word = message.content.split()
-	if word in any(automod):
+	if word == any(automod):
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
 		
