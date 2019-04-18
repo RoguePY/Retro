@@ -43,9 +43,10 @@ async def on_ready():
 	
 @client.event
 async def on_message(message):
+	def any(automod)
 	channel = message.channel
 	word = message.content.split()
-	if automod in word:
+	if word in automod:
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
 		
