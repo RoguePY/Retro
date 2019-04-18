@@ -89,17 +89,15 @@ async def on_ready():
 @client.command()
 async def role(ctx, userid, *, content:str):
 	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
-		try:
-			userid = int(userid)
-			channel = ctx.message.channel
-			await channel.send('test')
-			roleadd = discord.utils.get(ctx.guild.roles, name=content)
-			await channel.send('test2')
-			member = await client.get_user(userid)
-			await channel.send('test3')
-			await client.add_roles(member, roleadd)
-		except:
-			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
+		userid = int(userid)
+		channel = ctx.message.channel
+		await channel.send('test')
+		roleadd = discord.utils.get(ctx.guild.roles, name=content)
+		await channel.send('test2')
+		member = await client.get_user(userid)
+		await channel.send('test3')
+		await client.add_roles(member, roleadd)
+		await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
 
 
 @client.command()
