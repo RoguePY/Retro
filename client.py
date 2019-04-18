@@ -39,22 +39,9 @@ async def on_ready():
 	await channel.send("**---------------------------------**")
 	await channel.send("**Loading UNRELEASED version!**")
 	
-@client.event
-async def on_message(message):
-	word = message.content.lower()
-	if 'ass' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'fuck' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'shit' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-
+#@client.event
+#async def on_message(message):
+	#test
 		
 @client.command()
 async def role(ctx, member: discord.Member, *, content:str):
