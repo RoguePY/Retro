@@ -51,6 +51,17 @@ async def on_message(message):
 		await channel.send(message.author.mention + "*, no need to say that!*")
 		
 @client.command()
+async def lmao(ctx):
+	channel = ctx.message.channel
+	embed=discord.Embed(title="Thanks for Reading about Retro!", url="https://www.youtube.com/watch?v=dQw4w9WgXcQ", description="Let's Roll The Tunes, Rick!")
+	embed.set_author(name="Rogue#0002")
+	embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/294282531300311040/568359545114460160/Retro_Bot_Red_Gfx_Design_Rogue.png")
+	embed.add_field(name=What is Retro?, value=Retro is a bot created by Rogue as a way for him to learn more about programming in general, but then became a hobby. Rogue challenges himself with this bot to this day., inline=True)
+	embed.add_field(name=What features does Retro have currently?, value=Automod | Adding/Removing Roles, inline=True)
+	embed.add_field(name=What features are planned or are in progress?, value=Moderation | Giveaways | Autoresponding | ModMail | and more!, inline=True)
+	await channel.say(embed=embed)
+		
+@client.command()
 async def role(ctx, member: discord.Member, *, content:str):
 	channel = ctx.message.channel
 	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
