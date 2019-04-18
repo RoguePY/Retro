@@ -92,7 +92,7 @@ async def role(ctx, member: discord.Member, *, content:str):
 		try:
 			channel = ctx.message.channel
 			roleadd = discord.utils.get(ctx.guild.roles, name=content)
-			if roleadd in ctx.message.author.roles:
+			if roleadd in member.roles:
 				await member.remove_roles(roleadd)
 				await channel.send("Role Removed.")
 			else:
