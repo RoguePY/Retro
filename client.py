@@ -105,7 +105,7 @@ async def role(ctx, userid, *, content:str):
 async def purge(ctx, number):
 	number = int(number)
 	channel = ctx.message.channel
-	await client.delete_messages(number)
+	await ctx.delete_messages(number)
 	
 	
 	
