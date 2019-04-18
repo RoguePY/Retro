@@ -33,16 +33,16 @@ client.remove_command('help')
 @client.event
 async def on_ready():
 	channel = client.get_channel(568250999882514474)
-	game = discord.Game("on Version 0.0.1!")
+	game = discord.Game("on Version UNRELEASED!")
 	await client.change_presence(status=discord.Status.online, activity=game)
 	print("Hi.")
 	await channel.send("**---------------------------------**")
-	await channel.send("**Loading Version 0.0.1!**")
+	await channel.send("**Loading UNRELEASED version!**")
 	
 @client.event
 async def on_message(message):
 	if 'ass' in message.content:
-		await client.delete_message(message)
+		message.delete()
 #		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
 #		await client.send_message(message.channel, "No Cussing in this chat.")
 #	if 'cunt' in message.content:
