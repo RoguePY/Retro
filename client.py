@@ -87,19 +87,14 @@ async def on_ready():
 #		await client.send_message(message.channel, "No Cussing in this chat.")
 
 @client.command()
-async def role(ctx, userid, *, content:str):
+async def role(ctx, member: discord.Member, *, content:str):
 	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
-		userid = int(userid)
-		channel = ctx.message.channel
-		await channel.send('test')
-		roleadd = discord.utils.get(ctx.guild.roles, name=content)
-		await channel.send('test2')
-		member = client.get_user(userid)
-		await channel.send('test3')
-		await channel.send(roleadd)
-		await channel.send(member)
-		await member.add_roles(roleadd)
-		await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
+		try:
+			channel = ctx.message.channel
+			roleadd = discord.utils.get(ctx.guild.roles, name=content)
+			await member.add_roles(roleadd)
+		except:
+			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
 
 
 @client.command()
