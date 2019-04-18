@@ -42,55 +42,55 @@ async def on_ready():
 @client.event
 async def on_message(message):
 	word = message.content.lower()
-	if 'ass' in word.content:
+	if 'ass' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'fuck' in word.content:
+	if 'fuck' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'shit' in word.content:
+	if 'shit' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'nigga' in word.content:
+	if 'nigga' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'nigger' in word.content:
+	if 'nigger' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'pussy' in word.content:
+	if 'pussy' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'dick' in word.content:
+	if 'dick' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'cunt' in word.content:
+	if 'cunt' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'negro' in word.content:
+	if 'negro' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'bitch' in word.content:
+	if 'bitch' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'hoe' in word.content:
+	if 'hoe' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'whore' in word.content:
+	if 'whore' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'slut' in word.content:
+	if 'slut' in word:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
