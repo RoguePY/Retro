@@ -54,46 +54,6 @@ async def on_message(message):
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'nigga' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'nigger' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'pussy' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'dick' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'cunt' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'negro' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'bitch' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'hoe' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'whore' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
-	if 'slut' in word:
-		channel = message.channel
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
 
 		
 @client.command()
@@ -124,22 +84,5 @@ async def purge(ctx, number):
 async def version(ctx):
 	channel = ctx.message.channel
 	await channel.send("Running on the gears of Version ***0.0.1!***")
-	
-@client.command(pass_context=True)
-async def yt(ctx, url):
-	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
-		author = ctx.message.author
-		voice_channel = author.voice_channel
-		vc = await client.join_voice_channel(voice_channel)
-		player = await vc.create_ytdl_player(url)
-		player.start()
-	
-
-
-	
-
-	
-
-
 	
 client.run(os.environ['BOT_TOKEN'])
