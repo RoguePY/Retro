@@ -100,7 +100,7 @@ async def role(ctx, userid, role, *, content:str):
 @client.command(pass_context=True)
 async def version(ctx):
 	channel = ctx.message.channel
-	await channel.send("Running on the gears of Version ***0.0.1!***)
+	await channel.send("Running on the gears of Version ***0.0.1!***")
 	
 
 	
