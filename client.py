@@ -88,7 +88,7 @@ async def on_message(message):
 
 @client.command(pass_context=True)
 async def role(ctx, userid, role, *, content:str):
-	if '568149569578336257' in [role.id ctx.message.author.roles]:
+	if '568149569578336257' in [role.id for role in ctx.message.author.roles]:
 		try:
 			roleadd = discord.utils.get(member.server.roles, name=role)
 			member = await client.get_user_info(userid)
