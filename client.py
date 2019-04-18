@@ -90,6 +90,7 @@ async def on_ready():
 async def role(ctx, userid, *, content:str):
 	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
 		try:
+			userid = int(userid)
 			channel = ctx.message.channel
 			await channel.send('test')
 			roleadd = discord.utils.get(ctx.guild.roles, name=content)
