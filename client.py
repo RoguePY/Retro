@@ -41,50 +41,50 @@ async def on_ready():
 	
 @client.event
 async def on_message(message):
-    if 'ass' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'cunt' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'bitch' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'nigga' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'nigger' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'fuck' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'shit' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'pussy' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'dick' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'nigg@' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
-    if 'd1ck' in message.content:
-	await client.delete_message(message)
-	await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
-	await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'ass' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'cunt' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'bitch' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'nigga' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'nigger' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'fuck' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'shit' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'pussy' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'dick' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'nigg@' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
+	if 'd1ck' in message.content:
+		await client.delete_message(message)
+		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
+		await client.send_message(message.channel, "No Cussing in this chat.")
 
 @client.command(pass_context=True)
 async def role(ctx, userid, role, *, content:str):
@@ -96,13 +96,11 @@ async def role(ctx, userid, role, *, content:str):
 		except:
 			await client.send_message(ctx.message.channel, ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
 			
-			
-
 @client.command(pass_context=True)
 async def version(ctx):
 	await client.send_message(ctx.message.server, version)
 	
-@
+
 	
 
 
