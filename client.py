@@ -96,7 +96,7 @@ async def role(ctx, userid, *, content:str):
 		await channel.send('test2')
 		member = client.get_user(userid)
 		await channel.send('test3')
-		await client.add_roles(member, roleadd)
+		await member.add_roles(roleadd, reason=ctx.message.author.nickname + " added a role to a user.")
 		await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
 
 
