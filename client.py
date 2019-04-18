@@ -102,7 +102,8 @@ async def role(ctx, userid, *, content:str):
 
 
 @client.command()
-async def purge(ctx, number:int)
+async def purge(ctx, number)
+	number = int(number)
 	channel = ctx.message.channel
 	await client.delete_messages(number)
 	
