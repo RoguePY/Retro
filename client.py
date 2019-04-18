@@ -30,6 +30,8 @@ import asyncio
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
+automod = ['Fuck', 'Shit', 'Nigga', 'Nigger', 'ass', 'cunt', 'bitch', 'pussy', 'dick', 'hoe', 'slut', 'faggot']
+
 @client.event
 async def on_ready():
 	channel = client.get_channel(568250999882514474)
@@ -39,9 +41,13 @@ async def on_ready():
 	await channel.send("**---------------------------------**")
 	await channel.send("**Loading UNRELEASED version!**")
 	
-#@client.event
-#async def on_message(message):
-	#test
+@client.event
+async def on_message(message):
+	word = await message.content.lower()
+	for automod = in word:
+		channel = message.channel
+		await message.delete()
+		await channel.send(message.author.mention + "*, no need to say that!*")
 		
 @client.command()
 async def role(ctx, member: discord.Member, *, content:str):
