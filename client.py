@@ -88,9 +88,9 @@ async def on_ready():
 
 @client.command()
 async def role(ctx, member: discord.Member, *, content:str):
+	channel = ctx.message.channel
 	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
 		try:
-			channel = ctx.message.channel
 			roleadd = discord.utils.get(ctx.guild.roles, name=content)
 			if roleadd in member.roles:
 				await member.remove_roles(roleadd)
@@ -100,6 +100,8 @@ async def role(ctx, member: discord.Member, *, content:str):
 				await channel.send("Role Added.")
 		except:
 			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
+	else:
+		await channel.send("I'm sorry, " + ctx.message.author.name + ", you do not have access to this command!")
 
 
 @client.command()
