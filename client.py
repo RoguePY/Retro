@@ -119,12 +119,22 @@ async def purge(ctx, number):
 	channel = ctx.message.channel
 	await ctx.delete_messages(number)
 	
-	
-	
 @client.command()
 async def version(ctx):
 	channel = ctx.message.channel
 	await channel.send("Running on the gears of Version ***0.0.1!***")
+	
+@client.command(pass_context=True)
+async def yt(ctx, url):
+	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
+		author = ctx.message.author
+		voice_channel = author.voice_channel
+		vc = await client.join_voice_channel(voice_channel)
+		player = await vc.create_ytdl_player(url)
+		player.start()
+	
+
+
 	
 
 	
