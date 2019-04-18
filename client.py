@@ -92,7 +92,7 @@ async def role(ctx, userid, *, content:str):
 		try:
 			channel = ctx.message.channel
 			await channel.send('test')
-			roleadd = discord.utils.get(ctx.message.server.roles, name=content)
+			roleadd = discord.utils.get(ctx.guild.roles, name=content)
 			await channel.send('test2')
 			member = await client.get_user_info(userid)
 			await channel.send('test3')
