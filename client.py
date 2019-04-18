@@ -92,7 +92,12 @@ async def role(ctx, member: discord.Member, *, content:str):
 		try:
 			channel = ctx.message.channel
 			roleadd = discord.utils.get(ctx.guild.roles, name=content)
-			await member.add_roles(roleadd)
+			if roleadd in ctx.message.author.roles:
+				await member.remove_roles(roleadd)
+				await channel.send("Role Removed.")
+			else:
+				await member.add_roles(roleadd)
+				await channel.send("Role Added.")
 		except:
 			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
 
