@@ -94,7 +94,7 @@ async def role(ctx, userid, *, content:str):
 			await channel.send('test')
 			roleadd = discord.utils.get(ctx.guild.roles, name=content)
 			await channel.send('test2')
-			member = await client.get_user_info(userid)
+			member = await client.get_user(userid)
 			await channel.send('test3')
 			await client.add_roles(member, roleadd)
 		except:
