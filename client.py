@@ -59,7 +59,7 @@ async def lmao(ctx):
 	embed.add_field(name="What is Retro?, value=Retro is a bot created by Rogue as a way for him to learn more about programming in general, but then became a hobby. Rogue challenges himself with this bot to this day.", inline=True)
 	embed.add_field(name="What features does Retro have currently?, value=Automod | Adding/Removing Roles", inline=True)
 	embed.add_field(name="What features are planned or are in progress?, value=Moderation | Giveaways | Autoresponding | ModMail | and more!", inline=True)
-	await channel.say(embed=embed)
+	await channel.send(embed=embed)
 		
 @client.command()
 async def role(ctx, member: discord.Member, *, content:str):
