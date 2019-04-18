@@ -86,18 +86,18 @@ async def on_message(message):
 		await client.send_message(message.channel, message.author.mention + "*, no need to say that!*")
 		await client.send_message(message.channel, "No Cussing in this chat.")
 
-@client.command(pass_context=True)
-async def role(ctx, userid, role, *, content:str):
-	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
-		try:
-			channel = ctx.message.channel
-			roleadd = discord.utils.get(member.server.roles, name=role)
-			member = await client.get_user_info(userid)
-			await client.add_roles(member, roleadd)
-		except:
-			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
+#@client.command()
+#async def role(ctx, userid, role, *, content:str):
+#	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
+#		try:
+#			channel = ctx.message.channel
+#			roleadd = discord.utils.get(member.server.roles, name=role)
+#			member = await client.get_user_info(userid)
+#			await client.add_roles(member, roleadd)
+#		except:
+#			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
 			
-@client.command(pass_context=True)
+@client.command()
 async def version(ctx):
 	channel = ctx.message.channel
 	await channel.send("Running on the gears of Version ***0.0.1!***")
