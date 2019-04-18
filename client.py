@@ -95,6 +95,7 @@ async def on_message(message):
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
 
+		
 @client.command()
 async def role(ctx, member: discord.Member, *, content:str):
 	channel = ctx.message.channel
