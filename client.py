@@ -43,7 +43,7 @@ async def on_ready():
 	
 @client.event
 async def on_message(message):
-	word = await message.content.lower()
+	word = message.content.lower()
 	for word in automod:
 		channel = message.channel
 		await message.delete()
