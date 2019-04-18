@@ -42,13 +42,13 @@ async def on_ready():
 	await channel.send("**---------------------------------**")
 	await channel.send("**Loading UNRELEASED version!**")
 	
-@client.event
-async def on_message(message):
-	channel = message.channel
-	word = message.content.split()
-	if word == any(automod):
-		await message.delete()
-		await channel.send(message.author.mention + "*, no need to say that!*")
+#@client.event
+#async def on_message(message):
+	#channel = message.channel
+	#word = message.content.split()
+	#if word == any(automod):
+	#	await message.delete()
+	#	await channel.send(message.author.mention + "*, no need to say that!*")
 		
 @client.command()
 async def lmao(ctx):
