@@ -99,7 +99,15 @@ async def role(ctx, userid, *, content:str):
 			await client.add_roles(member, roleadd)
 		except:
 			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
-			
+
+
+@client.command()
+async def purge(ctx, number)
+	channel = ctx.message.channel
+	await client.delete_messages(number)
+	
+	
+	
 @client.command()
 async def version(ctx):
 	channel = ctx.message.channel
