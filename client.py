@@ -30,7 +30,7 @@ import asyncio
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
-automod = ['Fuck', 'Shit', 'Nigga', 'Nigger', 'ass', 'cunt', 'bitch', 'pussy', 'dick', 'hoe', 'slut', 'faggot']
+automod = ['fuck', 'shit', 'nigga', 'nigger', 'ass', 'cunt', 'bitch', 'pussy', 'dick', 'hoe', 'slut', 'faggot']
 
 @client.event
 async def on_ready():
@@ -44,7 +44,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
 	word = await message.content.lower()
-	for automod = in word:
+	for word in automod:
 		channel = message.channel
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
