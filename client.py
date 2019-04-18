@@ -34,11 +34,12 @@ version = '0.0.1'
 
 @client.event
 async def on_ready():
+	channel = client.get_channel(568250999882514474)
 	game = discord.Game("on Version 0.0.1!")
 	await client.change_presence(status=discord.Status.online, activity=game)
 	print("Hi.")
-	await client.send_message(client.get_channel('568250999882514474'), "**---------------------------------**")
-	await client.send_message(client.get_channel('568250999882514474'), "**Loading " + version + ".**")
+	await channel.send("**---------------------------------**")
+	await channel.send("**Loading " + version + ".**")
 	
 @client.event
 async def on_message(message):
@@ -89,17 +90,19 @@ async def on_message(message):
 
 @client.command(pass_context=True)
 async def role(ctx, userid, role, *, content:str):
-	if '568149569578336257' in [role.id for role in ctx.message.author.roles]:
+	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
 		try:
+			channel = ctx.message.channel
 			roleadd = discord.utils.get(member.server.roles, name=role)
 			member = await client.get_user_info(userid)
 			await client.add_roles(member, roleadd)
 		except:
-			await client.send_message(ctx.message.channel, ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
+			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
 			
 @client.command(pass_context=True)
 async def version(ctx):
-	await client.send_message(ctx.message.server, version)
+	channel = ctx.message.channel
+	await channel.send(version)
 	
 
 	
