@@ -30,8 +30,6 @@ import asyncio
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
-version = '0.0.1'
-
 @client.event
 async def on_ready():
 	channel = client.get_channel(568250999882514474)
@@ -39,7 +37,7 @@ async def on_ready():
 	await client.change_presence(status=discord.Status.online, activity=game)
 	print("Hi.")
 	await channel.send("**---------------------------------**")
-	await channel.send("**Loading " + version + ".**")
+	await channel.send("**Loading Version 0.0.1!**")
 	
 @client.event
 async def on_message(message):
@@ -102,7 +100,7 @@ async def role(ctx, userid, role, *, content:str):
 @client.command(pass_context=True)
 async def version(ctx):
 	channel = ctx.message.channel
-	await channel.send(version)
+	await channel.send("Running on the gears of Version ***0.0.1!***)
 	
 
 	
