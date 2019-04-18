@@ -34,7 +34,8 @@ version = '0.0.1'
 
 @client.event
 async def on_ready():
-	await client.change_presence((status=discord.Status.online, activity=discord.Streaming("**On Version 0.0.1!"**)))
+	game = discord.Game("on Version 0.0.1!")
+	await client.change_presence(status=discord.Status.online, activity=game)
 	print("Hi.")
 	await client.send_message(client.get_channel('568250999882514474'), "**---------------------------------**")
 	await client.send_message(client.get_channel('568250999882514474'), "**Loading " + version + ".**")
