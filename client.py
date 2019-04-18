@@ -91,8 +91,11 @@ async def role(ctx, userid, *, content:str):
 	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
 		try:
 			channel = ctx.message.channel
+			await channel.send('test')
 			roleadd = discord.utils.get(ctx.message.server.roles, name=content)
+			await channel.send('test2')
 			member = await client.get_user_info(userid)
+			await channel.send('test3')
 			await client.add_roles(member, roleadd)
 		except:
 			await channel.send(ctx.message.author.mention + ", the role could not be found or the userid is invalid!")
