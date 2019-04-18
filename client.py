@@ -87,7 +87,7 @@ async def on_ready():
 #		await client.send_message(message.channel, "No Cussing in this chat.")
 
 @client.command()
-async def role(ctx, userid, role, *, content:str):
+async def role(ctx, userid, *, content:str):
 	if 568149569578336257 in [role.id for role in ctx.message.author.roles]:
 		try:
 			channel = ctx.message.channel
