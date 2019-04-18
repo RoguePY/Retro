@@ -117,7 +117,7 @@ async def role(ctx, member: discord.Member, *, content:str):
 async def purge(ctx, number):
 	number = int(number)
 	channel = ctx.message.channel
-	await ctx.delete_messages(number)
+	await channel.delete_messages(number)
 	
 @client.command()
 async def version(ctx):
