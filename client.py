@@ -31,6 +31,7 @@ client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
 automod = ['fuck', 'shit', 'nigga', 'nigger', 'ass', 'cunt', 'bitch', 'pussy', 'dick', 'hoe', 'slut', 'faggot']
+def any(automod)
 
 @client.event
 async def on_ready():
@@ -43,7 +44,6 @@ async def on_ready():
 	
 @client.event
 async def on_message(message):
-	def any(automod)
 	channel = message.channel
 	word = message.content.split()
 	if word in automod:
