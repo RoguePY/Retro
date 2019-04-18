@@ -41,7 +41,7 @@ async def on_ready():
 	
 @client.event
 async def on_message(message):
-	word = message.lower()
+	word = message.content.lower()
 	if 'ass' in word.content:
 		channel = message.channel
 		await message.delete()
