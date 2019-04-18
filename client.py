@@ -31,7 +31,7 @@ client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
 automod = ['fuck', 'shit', 'nigga', 'nigger', 'ass', 'cunt', 'bitch', 'pussy', 'dick', 'hoe', 'slut', 'faggot']
-def any(automod)
+
 
 @client.event
 async def on_ready():
@@ -46,7 +46,7 @@ async def on_ready():
 async def on_message(message):
 	channel = message.channel
 	word = message.content.split()
-	if word in automod:
+	if word in any(automod):
 		await message.delete()
 		await channel.send(message.author.mention + "*, no need to say that!*")
 		
